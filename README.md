@@ -6,7 +6,10 @@ Ride share services have become increasingly popular in the past decade. Uber an
 The uber company try to analyze the prices of these ride-sharing apps and try to figure out what factors are driving the demand and how to use them as input to forecast the price of each ride. 
 
 This project implemented 2 machine learning techniques to analyse and make prediction to the ride based on contributing variables. 
+
+Analysing tool: Rapid Miner software.
 ## II. Data pre-processing
+
 ### 1. Import and clean data
 ### 2. Calculate weight for each independent variable
 ## III. Model training
