@@ -7,7 +7,8 @@ The uber company try to analyze the prices of these ride-sharing apps and try to
 
 This project implemented 2 machine learning techniques to analyse and make prediction to the ride based on contributing variables. 
 
-Analysing tool: Rapid Miner software.
+**Analysing tool: Rapid Miner software.**
+
 ## II. Data pre-processing
 
 ### 1. Import and clean data
