@@ -16,8 +16,14 @@ The datasets were imported into Rapid Miner system before conducting some basic 
 ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/8879fee0-3064-4e13-9115-fc2dda5a9dd0)
 - Set role: Assigned Price column as dependent variable and attributes of time (hour, day, month), location (destination, distance), weather as independent variables
 - Normalisation: Normalised the contributing attributes so that all variables had the similar scale from 0 to 1.
-- Remove correlated attributes: By setting the correlation threshold to 0.95, removed all attributes that have the correlation index below this level.- 
+- Remove correlated attributes: By setting the correlation threshold to 0.95, removed all attributes that have the correlation index below this level.
+- Data type transformation: Changed Price from Numeric to Polynomial because the function to calculate the weight of contributing attributes does not work with Numeric data (details in next part).
 ### 2. Calculate weight for each independent variable
+- Function used: Weight by Information Gain to identify the extent of independent variables' contribution to the value of dependent variable.
+![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/5290a66c-4e83-413d-8cac-270dbbaff4af)
+
+
+
 ## III. Model training
 ### 1. Random forest
 #### Model implementation
