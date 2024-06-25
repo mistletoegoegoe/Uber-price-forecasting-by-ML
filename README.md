@@ -21,9 +21,9 @@ The datasets were imported into Rapid Miner system before conducting some basic 
 ### 2. Calculate weight for each independent variable
 - Function used: Weight by Information Gain to identify the extent of independent variables' contribution to the value of dependent variable.
 ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/5290a66c-4e83-413d-8cac-270dbbaff4af)
-
-
-
+- Result:
+  
+  ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/2e2557ed-12b3-44a2-9412-b72e2523b65f)
 ## III. Model training
 ### 1. Random forest
 #### Model implementation
