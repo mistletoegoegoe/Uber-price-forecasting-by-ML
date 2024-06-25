@@ -9,9 +9,14 @@ This project implemented 2 machine learning techniques (Random forest and KNN) t
 
 **Analysing tool: Rapid Miner software.**
 
+**Datasets: Ride share train and Ride share test**
 ## II. Data pre-processing
-
 ### 1. Import and clean data
+The datasets were imported into Rapid Miner system before conducting some basic transformations: 
+![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/8879fee0-3064-4e13-9115-fc2dda5a9dd0)
+- Set role: Assigned Price column as dependent variable and attributes of time (hour, day, month), location (destination, distance), weather as independent variables
+- Normalisation: Normalised the contributing attributes so that all variables had the similar scale from 0 to 1.
+- Remove correlated attributes: By setting the correlation threshold to 0.95, removed all attributes that have the correlation index below this level.- 
 ### 2. Calculate weight for each independent variable
 ## III. Model training
 ### 1. Random forest
