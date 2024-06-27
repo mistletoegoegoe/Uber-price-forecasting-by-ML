@@ -76,7 +76,6 @@ The datasets were imported into Rapid Miner system before conducting some basic 
   - The process will iterate several times by Cross validation technique to find out the most appropriate one.  
 ### 2. Parameters optimisation
 Likewise the RF model, in this setup, Parameter optimisation are also utilised.
-
   ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/27284862-c126-4149-a1e0-d161a84ed9ba)
 
 - To optimize parameters used in KNN model using Optimize parameter operator. In this step, the k value was chosen to be optimized. The k-value is set from 1 to 100 as the window below. The reason to choose this range to test k-value is that the maximum k is equal to the square root of the number of records in the train dataset.
