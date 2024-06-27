@@ -32,9 +32,9 @@ The datasets were imported into Rapid Miner system before conducting some basic 
 - The first line is to setup the training model, the second line is to test the model on test dataset.
 - In the model, after transform the data by operators (Set Role, Select Relevant attributes, Filter non-missing values, Normalise, Remove correlated attributes), it passes the operator called Cross Validation.
 
-Cross validation is a technique used in machine learning to evaluate the performance of a model. It involves dividing the available data into multiple folds or subsets, using one of these folds as a validation set, and training the model on the remaining folds. Then, it helps to compare and select an appropriate model for the specific predictive modeling problem.
+**Cross validation is a technique used in machine learning to evaluate the performance of a model. It involves dividing the available data into multiple folds or subsets, using one of these folds as a validation set, and training the model on the remaining folds. Then, it helps to compare and select an appropriate model for the specific predictive modeling problem.**
 
-Che Cross Validation is also used in order to avoid model overfitting. The number of folds in this operator is kept at 10 as the optimal number.
+**Cross Validation is also used in order to avoid model overfitting. The number of folds in this operator is kept at 10 as the optimal number.**
 
 - In the Cross validation, a model of Random Forest is set up (see the image below):
   ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/5c2b0e40-f86e-4d04-8493-c1f94aecc0ca)
@@ -56,8 +56,8 @@ Che Cross Validation is also used in order to avoid model overfitting. The numbe
   
   ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/0046d573-ff42-4be7-a277-0be057743d40)
 
-
 ### 2. KNN
 #### Model implementation
+
 #### Parameters optimisation
 ## IV. Model Evaluation
