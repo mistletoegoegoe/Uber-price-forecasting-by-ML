@@ -85,4 +85,38 @@ Likewise the RF model, in this setup, Parameter optimisation are also utilised.
 - This is the result of running optimize operator with k-value:
   ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/79525e6e-867f-4ee1-9496-d2118cbc77ee)
 
-## IV. Model Evaluation
+## IV. Prediction and Model Evaluation
+### 1. KNN Prediction
+![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/7ab6fab4-5a97-42fe-8c8f-6b75de352c41)
+
+The chart of actual price and predicted price after KNN model: 
+
+![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/ec81ad8a-26c8-40a9-8918-cbb4aa88d23a)
+
+
+### 2. Random forest Prediction
+The prediction of Price after running Random Forest model:
+![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/23cc94ee-d2b9-44ec-abb8-308a5384b4d1)
+
+The chart of actual price and predicted price after Random Forest model: 
+
+![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/874a13b5-fd28-462f-aeff-14b09d835aec)
+
+### 3. Models comparison
+In this project, Root mean square error (RMSE) and mean absolute error (MAE), Mean relative error (MRE) and Mean square error (MSE) are used as performance indicators for models prediction.
+
+The table of RMSE, MAE< MRE, MSE of RF and KNN models: 
+
+  |               | RMSE  | MAE             | MRE               | MSE                |
+|---------------|-------|-----------------|-------------------|--------------------|
+| KNN           | 8.863 | 7.127 +/- 5.269 | 56.52% +/- 58.11% | 78.558 +/- 143.483 |
+| Random Forest | 8.554 |  7.025+/- 4.881 | 56.86% +/- 59.01% | 73.719 +/- 98.361  |
+
+#### Result interpretations: 
+-	Root Mean Square Error: The KNN model (8.863) is slightly higher than Random Forest (8.554). It is the one sign which indicates that Random Forest performs better than KNN in predicting the label variable. 
+-	Mean absolute error: This metric is quite similar in both models. In addition, the fluctuations of this measure are large for both, specifically 7.025  for Random Forest and 7.127 for KNN. This indicates that the variation between actual price and predicted price is quite far in general. Thus, the performance of both models is not very good in prediction of the independent variable. However, the Random Forest is a little lower than KNN.
+-	Mean Relative Error: The mean relative error in both models is around 56-57%. This number is quite high for a machine learning model performance. Thus, the conclusion can be drawn from this indication is that both models did not do well in prediction task. However, the uncertainty in MRE is also high (+/- 59.01% and +/- 58.01% for Random Forest and KNN model, respectively). That indicates both these models are not persistently predicting. Some records might be very close predictions, some might be not. 
+-	Mean Square error: Random Forest has a lower MSE than KNN (73.719 and 78.558, respectively), meaning that it is more accurate in predicting the price. However, the standard deviation for both are large (143.483 for KNN model, and 98.361 for Random Forest model), which indicates that these models did not do the prediction stably. They can predict very closely, however, in some cases, they can do it very badly. 
+
+In conclusion, it can be seen that Random forest performs better than KNN in price prediction task. However, both models still have many errors. Therefore, if we need to choose one between them, Random forest will be a better choice.  
+
