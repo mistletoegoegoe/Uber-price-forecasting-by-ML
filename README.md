@@ -20,7 +20,7 @@ The datasets were imported into Rapid Miner system before conducting some basic 
 - Data type transformation: Changed Price from Numeric to Polynomial because the function to calculate the weight of contributing attributes does not work with Numeric data (details in next part).
 ### 2. Calculate weight for each independent variable
 - Function used: Weight by Information Gain to identify the extent of independent variables' contribution to the value of dependent variable.
-![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/5290a66c-4e83-413d-8cac-270dbbaff4af)
+  ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/5290a66c-4e83-413d-8cac-270dbbaff4af)
 - Result:
   
   ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/2e2557ed-12b3-44a2-9412-b72e2523b65f)
@@ -56,8 +56,34 @@ The datasets were imported into Rapid Miner system before conducting some basic 
   
   ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/0046d573-ff42-4be7-a277-0be057743d40)
 
+  ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/63ffa98d-c848-49f6-92c6-13cf7d73b564)
+
+
 ### 2. KNN
 #### Model implementation
+![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/94f488fc-db48-4437-adf8-3af989748c90)
 
-#### Parameters optimisation
+### Model interpretation: 
+- The first line is to setup the training model, the second line is to test the model on test dataset.
+- In the model, after transform the data by operators (Set Role, Select Relevant attributes, Filter non-missing values, Normalise, Remove correlated attributes), it passes the operator called Cross Validation.
+- In the Cross validation, a model of KNN is set up (see the image below):
+  ### The intially model's parameters selection
+  ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/f62f87de-ab83-4e7f-8b2a-07fbc803658d)
+
+ ### The model explanation:
+  - A KNN model is implemented on training dataset.
+  - Then, this model will use test dataset as the input to calculate the performance of the model.
+  - The process will iterate several times by Cross validation technique to find out the most appropriate one.  
+### 2. Parameters optimisation
+Likewise the RF model, in this setup, Parameter optimisation are also utilised.
+
+  ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/27284862-c126-4149-a1e0-d161a84ed9ba)
+
+- To optimize parameters used in KNN model using Optimize parameter operator. In this step, the k value was chosen to be optimized. The k-value is set from 1 to 100 as the window below. The reason to choose this range to test k-value is that the maximum k is equal to the square root of the number of records in the train dataset.
+
+  ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/b272c48b-4327-4c38-b57b-2cbb5bff1519)
+
+- This is the result of running optimize operator with k-value:
+  ![image](https://github.com/mistletoegoegoe/Uber-price-forecasting-by-ML/assets/121160527/79525e6e-867f-4ee1-9496-d2118cbc77ee)
+
 ## IV. Model Evaluation
